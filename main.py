@@ -310,12 +310,15 @@ def ByBit_main():
 
 def history_main():
     while True:
-        now = datetime.now()
-        current_time = now.strftime("%M")
-        if int(current_time) == 60 or int(current_time) == 0:
-            history()
-            time.sleep(60)
-        time.sleep(30)
+        try:
+            now = datetime.now()
+            current_time = now.strftime("%M")
+            if int(current_time) == 60 or int(current_time) == 0:
+                history()
+                time.sleep(60)
+            time.sleep(30)
+        except:
+            pass
 
 def buttons():
     bot = bot_api()
