@@ -124,7 +124,7 @@ def history():
     #    txt = txt + f"{i['quantity']} | <code>{i['symbol']}</code>, #{i['symbol']} | {datetime.fromtimestamp(i['time']).strftime("%A, %d, %I:%M:%S")}\n"#datetime.fromtimestamp(i['time']).strftime("%A, %B %d, %Y %I:%M:%S"
     #    txt = txt + (f"<code>{i['symbol']}</code>, #{i['symbol']}\n"
     #                 f"{i['quantity']} | {datetime.fromtimestamp(i['time']).strftime("%d, %I:%M:%S")}\n")
-        txt = txt + f"| {i['quantity']} | <code>{i['symbol']}</code> | {datetime.fromtimestamp(i['time']).strftime('%A, %I:%M:%S')}\n"#datetime.fromtimestamp(i['time']).strftime("%A, %B %d, %Y %I:%M:%S"
+        txt = txt + f"| {i['quantity']} | #{i['symbol']} | {datetime.fromtimestamp(i['time']).strftime('%A, %I:%M:%S')}\n"#datetime.fromtimestamp(i['time']).strftime("%A, %B %d, %Y %I:%M:%S"
     bot = bot_api()
     bot.send_message(kanal, txt, parse_mode='HTML')
 
