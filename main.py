@@ -313,7 +313,7 @@ def history_main():
         try:
             now = datetime.now()
             current_time = now.strftime("%M")
-            if int(current_time) == 60 or int(current_time) == 0:
+            if int(current_time) == 30 or int(current_time) == 0:
                 history()
                 time.sleep(60)
             time.sleep(30)
